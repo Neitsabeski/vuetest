@@ -24,9 +24,17 @@ const store = createStore({
         },
         login: ({commit}, userInfos) => {
             commit;
-            console.log(userInfos.data);
+            instance.post('/users/token', userInfos)
+            .then(function (response){
+                console.log(response);
+            })
+            .catch(function (error){
+                console.log(error);
+            });
         }
     }
 })
+
+//commentaire
 
 export default store;
