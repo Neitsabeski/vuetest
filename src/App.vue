@@ -17,18 +17,44 @@
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><router-link to="/sign">Login/Register</router-link></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><router-link to="/loginregister">Login/Register</router-link></a>
+            <a v-if="status == ''" class="nav-link" href="#"><router-link to="/loginregister">Login/Register</router-link></a>
+            <span v-if="status == 'logged'" class="nav-link" href="#">Logout</span>
           </li>
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-primary" type="submit">Search</button>
         </form>
       </div>
     </div>
   </nav>
   <router-view/>
 </template>
+
+<script>
+
+import { mapState } from 'vuex';
+
+  export default {
+    computed: {
+      validatedFields: function() {
+          if (this.mode == 'register'){
+              if(this.email != "" && this.firstname != "" && this.lastname != "" && this.lang!= "" && this.phone!= "" && this.password!= "" && this.passwordverification!= ""){
+                  return true;
+              } else {
+                  return false;
+              }
+          } else {
+              if(this.email != "" && this.password!= ""){
+                  return true;
+              } else {
+                  return false;
+              }
+          }
+      },
+      ...mapState(['status'])
+    }
+  }
+
+
+</script>

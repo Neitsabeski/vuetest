@@ -9,22 +9,52 @@ const instance = axios.create({
 // Create a new store instance.
 const store = createStore({
     state: {
+        status: '',
+        user: {
+            userId: -1,
+            token: '',
+        }
+    },
+    mutations: {
+        setStatus: function(state, status) {
+            state.status = status;
+        },
+        logUser: function(state, user) {
+            state.user = user;
+        }
+    },
+    getters: {
 
     },
     actions: {
         register: ({commit}, userInfos) => {
-            commit;
-            instance.post('/users', userInfos)
-            .then(function (response) {
-                console.log(response);
+            commit('setStatus', 'loading');
+            return new Promise((resolve, reject) => {
+                instance.post('/users/register', userInfos)
+                .then(function (response) {
+                    commit('setStatus', 'created');
+                    resolve(response);
+                })
+                .catch(function (error) {
+                    commit('setStatus', 'error_register');
+                    reject(error);
+                });
             })
-            .catch(function (error) {
-                console.log(error);
-            });
         },
         login: ({commit}, userInfos) => {
-            commit;
-            console.log(userInfos.data);
+            commit('setStatus', 'loading');
+            return new Promise((resolve, reject) => {
+                instance.post('/users/login', userInfos)
+                .then(function (response) {
+                    commit('setStatus', 'logged');
+                    commit('logUser', response.data);
+                    resolve(response);
+                })
+                .catch(function (error) {
+                    commit('setStatus', 'error_login');
+                    reject(error);
+                });
+            })
         }
     }
 })

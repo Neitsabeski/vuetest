@@ -11,29 +11,29 @@
                     <p class="card__subtitle" v-if="mode == 'login'">Don't have an account ? <span class="card__action" @click="switchToRegister">Register here</span></p>
                     <p class="card__subtitle" v-else>Already have an account ? <span class="card__action" @click="switchToLogin">Login here</span></p>
                 </div>
-                
+
                 <!-- Email section -->
                 <div class="group form-outline mb-4" >
-                    <input v-model="email" class="form-control" type="email" placeholder="Email address"/>
+                    <input v-model="email" class="form-control" type="email" placeholder="Email address" required/>
                 </div>
 
                 <!-- Names section -->
                 <div class="row form-outline mb-4" v-if="mode == 'register'">
                     <div class="group col-md-6">
-                        <input v-model="firstname" class="form-control" type="text" placeholder="First Name"/>
+                        <input v-model="firstname" class="form-control" type="text" placeholder="First Name" required/>
                     </div>
                     <div class="group col-md-6  form-outline">
-                        <input v-model="lastname" class="form-control" type="text" placeholder="Last Name"/>
+                        <input v-model="lastname" class="form-control" type="text" placeholder="Last Name" required/>
                     </div>
                 </div>
 
                 <!-- Phone section -->
                 <div class="group form-outline mb-4" v-if="mode == 'register'">
-                    <input v-model="phone" class="form-control" type="tel" placeholder="Phone number"/>                
+                    <input v-model="phone" class="form-control" type="tel" placeholder="Phone number" required/>                
                 </div>
 
                 <!-- Langue section -->
-                <div class="group form-outline mb-4" v-if="mode == 'register'">
+                <div class="group form-outline mb-4" v-if="mode == 'register'" required>
                     <select v-model="lang" class="form-control">
                         <option value="" disabled>Language</option>
                         <option value="fr">Français</option>
@@ -43,7 +43,7 @@
 
                 <!-- Password section -->
                 <div class="group form-outline mb-4">
-                    <input v-model="password" class="form-control" type="password" placeholder="Password"/>
+                    <input v-model="password" class="form-control" type="password" placeholder="Password" required/>
                 </div>
 
                 <!-- Password Verification section -->
@@ -53,15 +53,22 @@
 
                 <!-- Buttons section -->
                 <div class="d-flex justify-content-center group form-outline mb-4">
+                    <div v-if="mode == 'login' && status == 'error_login'">
+                        <span>Bad email address and/or password</span>
+                    </div>
+
+
                     <div v-if="mode == 'login'">
                         <button class="btn btn-primary" :class="{'disabled' : !validatedFields}" @click="login">
-                            Login
+                            <span v-if="status == 'loading'">Login in ...</span>
+                            <span v-else>Login</span>
                         </button>
                         <span>Forgot password?</span>
                     </div>
                     <div v-else>
                         <button class="btn btn-primary" :class="{'disabled' : !validatedFields}" @click="register">
-                            Register
+                            <span v-if="status == 'loading'">Register in ...</span>
+                            <span v-else>Register</span>
                         </button>
                     </div>
                 </div>
@@ -74,12 +81,11 @@
 
 
 <script>
-import { objectExpression } from '@babel/types';
-import { TypedChainedSet } from 'webpack-chain';
 
+    import { mapState } from 'vuex';
 
     export default {
-        name: 'Login',
+        name: 'Sign',
         data: function() {
             return {
                 mode: 'login',
@@ -107,7 +113,8 @@ import { TypedChainedSet } from 'webpack-chain';
                         return false;
                     }
                 }
-            }
+            },
+            ...mapState(['status'])
         },
         methods: {
             switchToRegister: function() {
@@ -116,13 +123,19 @@ import { TypedChainedSet } from 'webpack-chain';
             switchToLogin: function() {
                 this.mode = 'login';
             },
-            login: function(){
+            login: function(event){
+                const self = this;
                 this.$store.dispatch('login', {
                     email: this.email,
                     password: this.password
+                }).then(function(response){
+                    self.$router.push('profile');
+                }, function(error){
+                    console.log(error);
                 })
             },
-            register: function(){
+            register: function(event){
+                const self = this;
                 this.$store.dispatch('register', {
                     email: this.email,
                     firstname: this.firstname,
@@ -131,8 +144,13 @@ import { TypedChainedSet } from 'webpack-chain';
                     lang: this.lang,
                     password: this.password,
                     passwordverification: this.passwordverification
+                }).then(function(response){
+                    console.log(response);
+                    self.login();
+                }, function(error){
+                    console.log(error);
                 })
-            }
+            },
         }
     }
 
