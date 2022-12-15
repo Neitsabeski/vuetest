@@ -5,7 +5,7 @@
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col-xl-10">
-                        <Sign />
+                        <SignComp />
                     </div>
                 </div>
             </div>
@@ -14,11 +14,11 @@
 </template>
 
 <script>
-    import Sign from '@/components/Sign.vue'
+    import SignComp from '@/components/SignComponent.vue'
 
     export default {
         components: {
-            Sign
+            SignComp
         }
     }
 </script>

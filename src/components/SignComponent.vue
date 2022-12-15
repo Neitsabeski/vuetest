@@ -5,8 +5,8 @@
 
                 <!-- Titles section -->
                 <div class="text-center">
-                    <h1 class="card_title" v-if="mode == 'login'">Login</h1>
-                    <h1 class="card_title" v-else>Register</h1>
+                    <h2 class="card_title" v-if="mode == 'login'">Login</h2>
+                    <h2 class="card_title" v-else>Register</h2>
 
                     <p class="card_subtitle" v-if="mode == 'login'">Don't have an account ? <span class="card_action" @click="switchToRegister">Register here</span></p>
                     <p class="card_subtitle" v-else>Already have an account ? <span class="card_action" @click="switchToLogin">Login here</span></p>

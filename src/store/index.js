@@ -6,9 +6,12 @@ const instance = axios.create({
     baseURL: 'https://virtserver.swaggerhub.com/SEBASTIENGARDIER/primeflix/1.0.0'
 });
 
+
 // Create a new store instance.
 const store = createStore({
+    debug: true,
     state: {
+        currentMovie: {},
         status: '',
         user: {
             userId: -1,
