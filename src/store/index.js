@@ -4,6 +4,7 @@ const axios = require('axios');
 
 const instance = axios.create({
     baseURL: 'https://virtserver.swaggerhub.com/SEBASTIENGARDIER/primeflix/1.0.0'
+    //baseURL: 'https://localhost:5000/api/'
 });
 
 
