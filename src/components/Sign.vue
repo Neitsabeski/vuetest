@@ -57,7 +57,6 @@
                         <span>Bad email address and/or password</span>
                     </div>
 
-
                     <div v-if="mode == 'login'">
                         <button class="btn btn-primary" :class="{'disabled' : !validatedFields}" @click="login">
                             <span v-if="status == 'loading'">Login in ...</span>
