@@ -59,4 +59,6 @@ const store = createStore({
     }
 })
 
+//commentaire
+
 export default store;
