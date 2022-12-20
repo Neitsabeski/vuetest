@@ -4,7 +4,7 @@
     <div class="card h-100 shadow">
         <div class="card-bordy">
             <span>
-                {{ pays.name }}
+                {{ element.name }}
             </span>
         </div>
     </div>
@@ -16,7 +16,7 @@
     
     export default {
         name: "cards",
-        props: ["pays"],
+        props: ["element"],
     };
 
 </script>

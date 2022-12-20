@@ -72,6 +72,9 @@
                     </div>
                 </div>
             </div>
+
+            <FBLogComp />
+            
         </div>
     </div>
 
@@ -81,10 +84,14 @@
 
 <script>
 
+    import FBLogComp from '@/components/FacebookLoginComponent.vue'
     import { mapState } from 'vuex';
 
     export default {
         name: 'Sign',
+        components: {
+            FBLogComp
+        },
         data: function() {
             return {
                 mode: 'login',

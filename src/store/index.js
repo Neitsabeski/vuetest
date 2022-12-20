@@ -7,7 +7,6 @@ const instance = axios.create({
     //baseURL: 'https://localhost:5000/api/'
 });
 
-
 // Create a new store instance.
 const store = createStore({
     debug: true,
