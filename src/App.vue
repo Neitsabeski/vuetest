@@ -15,7 +15,7 @@
     components: {
       FooterComp,
       HeaderComp
-    }
+    },
   }
 
 

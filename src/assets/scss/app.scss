@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap');
 
 
+@import './variables';
+
 .transparent {
     background-color: rgba(255, 255, 255, 0.5);
 }
@@ -25,7 +27,7 @@
 }
 
 body {
-  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  background-image: linear-gradient(62deg, $myPurple 0%, $myBlue 100%);
   justify-content: center;
   min-height: 100vh;
 }
@@ -42,7 +44,7 @@ h1 {
 }
 
 .card_action {
-    color:#2196F3;
+    color: $myPurple;
     text-decoration: underline;
 }
 
@@ -55,4 +57,29 @@ footer {
   text-align: center;
   margin-top: 50px;
   padding: 15px 0px;
+}
+
+.btn-primary:hover{
+  color:$myPurple;
+  background-color: white;
+  border-color: $myPurple;
+}
+
+.btn.btn-primary.disabled, .btn.btn-primary:disabled, .btn-primary, .btn-primary:active:focus{
+  color: white;
+  background-color: $myPurple;
+  border-color: $myPurple;
+}
+
+
+.nav-item .nav-link a{
+  color: $myPurple;
+}
+
+.form-control:hover, .form-control:focus{
+  border-color: $myPurple;
+}
+
+.form-control:focus{
+  box-shadow: 0 0 0 0.2rem $myPurple;
 }
