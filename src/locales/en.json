@@ -1,0 +1,34 @@
+{
+  "home":{
+    "title": "Home page"
+  },
+  "products":{
+    "title": "Products page"
+  },
+  "about":{
+    "title": "About page"
+  },
+  "contact":{
+    "title": "Contact page"
+  },
+  "cart":{
+    "title": "Cart page"
+  },
+  "loginRegister":{
+    "title": "Login/Register page"
+  },
+  "profile":{
+    "title": "Profiles page"
+  },
+  "homeLink": "Home",
+  "productsLink": "Products",
+  "filmsLink": "Films",
+  "seriesLink": "Series",
+  "aboutLink": "About",
+  "searchField": "Search...",
+  "searchBtn": "Search",
+  "cartLink": "Cart",
+  "loginRegisterLink": "Login/Register",
+  "logoutLink": "Logout",
+  "contactLink": "Contact"
+}

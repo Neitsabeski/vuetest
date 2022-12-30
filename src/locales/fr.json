@@ -1,0 +1,34 @@
+{
+  "home":{
+    "title": "Voici la page d'accueil"
+  },
+  "products":{
+    "title": "Voici la page des produits"
+  },
+  "about":{
+    "title": "Voici la page à propos"
+  },
+  "contact":{
+    "title": "Voici la page de contact"
+  },
+  "cart":{
+    "title": "Voici la page panier"
+  },
+  "loginRegister":{
+    "title": "Voici la page d'authentification"
+  },
+  "profile":{
+    "title": "Voici la page du profile"
+  },
+  "homeLink": "Accueil",
+  "productsLink": "Produits",
+  "filmsLink": "Films",
+  "seriesLink": "Séries",
+  "aboutLink": "A propos",
+  "searchField": "Rechercher...",
+  "searchBtn": "Rechercher",
+  "cartLink": "Panier",
+  "loginRegisterLink": "Connexion/Inscription",
+  "logoutLink": "Déconnexion",
+  "contactLink": "Contact"
+}

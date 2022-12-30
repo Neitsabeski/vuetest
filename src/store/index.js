@@ -11,7 +11,6 @@ const instance = axios.create({
 const store = createStore({
     
     state: {
-        lang: 'en',
         status: '',
         user: {
             userId: -1,

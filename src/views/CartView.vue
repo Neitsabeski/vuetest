@@ -1,6 +1,6 @@
 <template>
-    <div class="products">
-        <h1>This is the cart page</h1>
+    <div class="cart">
+        <h1>{{ $t('cart.title')}}</h1>
         <section class="h-100 gradient-form bg-light">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">

@@ -6,64 +6,65 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="justify-content-center align-items-center navbar-nav me-auto mb-2 mb-lg-0">
+          
           <li class="nav-item">
             <div class="nav-link">
               <router-link to="/">
-                Home
+                {{ $t('homeLink')}}
               </router-link>
             </div>
           </li>
           <li class="nav-item">
             <div class="nav-link">
               <router-link to="/products">
-                Products
+                {{ $t('productsLink')}}
               </router-link>
             </div>
           </li>
           <li class="nav-item">
               <div class="nav-link disabled">
-                Films
+                {{ $t('filmsLink')}}
               </div>
           </li>
           <li class="nav-item">
               <div class="nav-link disabled">
-                Series
+                {{ $t('seriesLink')}}
               </div>
-          </li>
-          <li class="nav-item">
-            <div class="nav-link">
-              <router-link to="/about">
-                About
-              </router-link>
-            </div>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-primary" type="submit">Search</button>
-        </form>
-        <div class="nav-item">
-            <select class="selectpicker form-control" data-width="fit">
-                <option value="en">English</option>
-                <option value="fr">Français</option>
-            </select>
-        </div>
-        <ul class="d-flex navbar-nav">
+        <ul class="d-flex navbar-nav dropdown-toggle">
+          
+          <div class="nav-item">
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="..." aria-label="Search">
+              <button class="btn btn-primary" type="submit">
+                {{ $t('searchBtn')}}
+              </button>
+            </form>
+          </div>
+          
+          <li class="nav-item">
+            <LocaleSwitcher/>
+          </li>
+          
           <li class="nav-item">
             <div class="nav-link">
                 <router-link to="/cart">
-                  Cart ({{ this.$store.state.cartCount }})
+                  {{ $t('cartLink')}}({{ this.$store.state.cartCount }})
                 </router-link>
               </div>
           </li>
+
           <li class="nav-item">
             <div v-if="status == ''" class="nav-link">
               <router-link to="/loginregister">
-                Login/Register
+                {{ $t('loginRegisterLink')}}
               </router-link>
             </div>
-            <span v-if="status == 'logged'" class="nav-link">Logout</span>
+            <span v-if="status == 'logged'" class="nav-link">
+              {{ $t('logoutLink')}}
+            </span>
           </li>
         </ul>
       </div>
@@ -73,9 +74,11 @@
 
 <script>
 
+    import LocaleSwitcher from "./LocaleSwitcher.vue";
     import { mapState } from 'vuex';
 
     export default {
+      components: { LocaleSwitcher, LocaleSwitcher },
       computed: {
           ...mapState(["status"])
       }

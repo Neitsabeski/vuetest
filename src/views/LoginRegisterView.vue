@@ -1,6 +1,6 @@
 <template>
     <div class="loginregister">
-        <h1>This is a sign page</h1>
+        <h1>{{ $t('loginRegister.title')}}</h1>
         <section class="h-100 gradient-form bg-light">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
