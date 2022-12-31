@@ -7,11 +7,8 @@ module.exports = defineConfig({
       locale: 'en',
       fallbackLocale: 'en',
       localeDir: 'locales',
-      enableInSFC: true,
-      enableLegacy: true,
-      runtimeOnly: false,
-      compositionOnly: true,
-      fullInstall: true
+      enableInSFC: true
     }
   }
 })
+

@@ -292,6 +292,8 @@ const store = createStore({
                     state.cartCount ++;
                 }
             }
+
+            localStorage.cart = state.cart;
         }
     },
     getters: {

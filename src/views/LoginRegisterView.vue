@@ -94,6 +94,8 @@
 
     import FBLogComp from '@/components/FacebookLoginComponent.vue'
     import { mapState } from 'vuex';
+    import utils from '../helpers/utils';
+
 
     export default {
         name: 'Sign',
@@ -138,6 +140,9 @@
                 this.mode = 'login';
             },
             login: function(event){
+
+                utils.hashSha256(this.password);
+
                 const self = this;
                 this.$store.dispatch('login', {
                     email: this.email,
