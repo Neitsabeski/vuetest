@@ -30,5 +30,6 @@
   "cartLink": "Cart",
   "loginRegisterLink": "Login/Register",
   "logoutLink": "Logout",
-  "contactLink": "Contact"
+  "contactLink": "Contact",
+  "offersLink": "Offers"
 }

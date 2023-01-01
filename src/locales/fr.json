@@ -30,5 +30,6 @@
   "cartLink": "Panier",
   "loginRegisterLink": "Connexion/Inscription",
   "logoutLink": "Déconnexion",
-  "contactLink": "Contact"
+  "contactLink": "Contact",
+  "offersLink": "Offres"
 }

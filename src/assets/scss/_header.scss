@@ -1,0 +1,17 @@
+.navbar {
+    background-color: rgba(0, 0, 0, 0.278);
+    position : fixed;
+    top: -0px;
+    z-index: 5;
+    width: 100%;
+    color: white;
+  }
+
+  .nav-item .nav-link, .nav-link a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-link .navbar-brand{
+    color: $myPurple;
+  }

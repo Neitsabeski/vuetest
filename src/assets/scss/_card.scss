@@ -1,0 +1,16 @@
+.card {
+    max-width: 100%;
+    background-color: white;
+    border-radius: 16px;
+    padding: 20px;
+  }
+  
+  .card_action {
+      color: $myPurple;
+      text-decoration: underline;
+  }
+  
+  .card_action:hover {
+      cursor:pointer;
+  }
+  
