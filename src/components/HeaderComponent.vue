@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-      <div class="nav-link navbar-brand"><router-link to="/">P R I M E F L I X</router-link></div>
+      <div id="brand" class="nav-link navbar-brand"><router-link to="/">P R I M E F L I X</router-link></div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

@@ -31,7 +31,7 @@
                                 <div class="row">
 
                                     <!-- CARDS -->
-                                    <div v-for="product in products" class="col-md-3 card  p-3 mb-2">
+                                    <div v-for="product in products" v-bind:key=product.id class="col-md-3 card  p-3 mb-2">
                                         <img class="card-img-top" src="../../public/img/products/noimage.png" alt=""/>
 
                                         <div class="card-body">
@@ -47,7 +47,7 @@
                                                 <p>{{ product.format.name }}</p>
                                             </div>
                                             
-                                            <div v-for="genre in product.genres">
+                                            <div v-for="genre in product.genres" v-bind:key="genre.id">
                                                 <span>{{ genre.name }}</span>
                                             </div>
                                             <div>
