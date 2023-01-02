@@ -1,0 +1,71 @@
+.background-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    overflow: hidden;
+
+}
+
+.curve {
+    width: 1500px;
+    height: 1500px;
+    background-image: url('../img/curve.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+
+    top: -300px;
+    right: -800px;
+}
+  
+.circleBlue {
+    width: 200px;
+    height: 200px;
+    background-image: url('../img/circleBlue.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+
+    left: -50px;
+    top: 350px;
+}
+  
+.trianglePink {
+    width: 200px;
+    height: 200px;
+    background-image: url('../img/trianglePink.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+
+    
+    left: 400px;
+    top: 1200px;
+}
+
+.triangleBlue {
+    width: 150px;
+    height: 150px;
+    background-image: url('../img/triangleBlue.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+
+    right: 250px;
+    top: 850px;
+}
+  
+.pentagonePink {
+    width: 200px;
+    height: 200px;
+    background-image: url('../img/pentagonePink.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+
+    right: 50px;
+    top: -50px;
+}
+
+.deco-svg:hover {
+    width: 250px;
+    height: 250px;
+}

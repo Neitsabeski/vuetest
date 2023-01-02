@@ -5,6 +5,7 @@
 @import './footer.scss';
 @import './card';
 @import './form';
+@import './background';
 
 .transparent {
     background-color: rgba(255, 255, 255, 0.5);
@@ -23,24 +24,20 @@
 }
 
 body {
-  background-image: linear-gradient(62deg, $myPurple 0%, $myBlue 100%);
-  justify-content: center;
+  background-color: $myPurple;
   min-height: 100vh;
-}
-
-body {
-  background-color: rgba(45, 0, 89, 1);
-  background-image:   
+  background-image:
       radial-gradient(
-          circle farthest-corner at top left, rgba(201, 0, 118,1) 0%, rgba(225, 243, 97,0) 50%),
+          circle farthest-corner at top left, $myPink 0%, $myBlue 50%),
       radial-gradient(
-          circle farthest-corner at top right, rgba(45, 0, 89, 1) 0%, rgba(45, 0, 89, 1) 10%),
+          circle farthest-corner at top right, $myPurple 0%, $myPurple 10%),
       radial-gradient(
-          circle farthest-side at bottom right, rgba(201, 0, 118,1) 0%, rgba(201, 0, 118,1) 33%),
+          circle farthest-corner at bottom right, $myPink 0%, $myPink 33%),
       radial-gradient(
-          circle farthest-side at bottom left, rgba(201, 0, 118,1) 0%, rgba(201, 0, 118,1) 33%),
+          circle farthest-side at bottom left, $myPink 0%, $myPink 33%),
       radial-gradient(
-          ellipse at bottom center, rgba(201, 0, 118,1) 0%, rgba(201, 0, 118,1) 80%);
+          ellipse at bottom center, $myPink 0%, $myPink 80%);
+  
 }
 
 h1 {
@@ -71,4 +68,14 @@ h1 {
 
 .pinky {
   color: $myPink;
+}
+
+.pannel {
+  background-color: $myDarkTransparent;
+  padding: 20px 5px 5px 5px;
+  color: white;
+}
+
+.container {
+  min-width: 75%;
 }

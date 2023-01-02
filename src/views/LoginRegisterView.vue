@@ -1,12 +1,12 @@
 <template>
     <div class="loginregister">
-        <h1>{{ $t('loginRegister.title')}}</h1>
-        <section class="h-100 gradient-form bg-light">
+        
+        <section class="h-100 gradient-form">
             <div class="container py-5 h-100">
-                <div class="row d-flex justify-content-center align-items-center h-100">
+                <h1>{{ $t('loginRegister.title')}}</h1>
+                <div class="row d-flex justify-content-center align-items-center h-100 pannel">
                     <div class="col-xl-10">
                         
-                        <div class="card">
                             <div class="row g-0 d-flex justify-content-center">
                                 <div class="col-lg-6 ">
 
@@ -81,7 +81,6 @@
                                 </div>
                                 <FBLogComp />
                             </div>
-                        </div>
 
                     </div>
                 </div>

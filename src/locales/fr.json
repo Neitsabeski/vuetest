@@ -1,24 +1,24 @@
 {
   "home":{
-    "title": "Voici la page d'accueil"
+    "title": "Accueil"
   },
   "products":{
-    "title": "Voici la page des produits"
+    "title": "Produits"
   },
   "about":{
-    "title": "Voici la page à propos"
+    "title": "A propos"
   },
   "contact":{
-    "title": "Voici la page de contact"
+    "title": "Contact"
   },
   "cart":{
-    "title": "Voici la page panier"
+    "title": "Panier"
   },
   "loginRegister":{
-    "title": "Voici la page d'authentification"
+    "title": "Authentification"
   },
   "profile":{
-    "title": "Voici la page du profile"
+    "title": "Profile"
   },
   "homeLink": "Accueil",
   "productsLink": "Produits",

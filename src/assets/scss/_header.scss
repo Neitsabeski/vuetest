@@ -1,10 +1,11 @@
 .navbar {
-  background-color: rgba(0, 0, 0, 0.278);
+  background-color: $myBlue;
   position : fixed;
   top: -0px;
   z-index: 5;
   width: 100%;
   color: white;
+  text-transform: uppercase;
 }
 
 .nav-item .nav-link, .nav-link a {
@@ -13,7 +14,7 @@
 }
   
 .navbar-brand a{
-  color: $myPurple;
+  color: $myPink;
 }
 
 .nav-link a:hover {

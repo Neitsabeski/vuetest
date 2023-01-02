@@ -1,24 +1,24 @@
 {
   "home":{
-    "title": "Home page"
+    "title": "Home"
   },
   "products":{
-    "title": "Products page"
+    "title": "Products"
   },
   "about":{
-    "title": "About page"
+    "title": "About"
   },
   "contact":{
-    "title": "Contact page"
+    "title": "Contact"
   },
   "cart":{
-    "title": "Cart page"
+    "title": "Carte"
   },
   "loginRegister":{
-    "title": "Login/Register page"
+    "title": "Login/Register"
   },
   "profile":{
-    "title": "Profiles page"
+    "title": "Profiles"
   },
   "homeLink": "Home",
   "productsLink": "Products",

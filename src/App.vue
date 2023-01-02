@@ -3,6 +3,8 @@
     <HeaderComp/>
     <router-view/>
     <FooterComp />
+    
+    <BackgroundComp />
   </div>
 </template>
 
@@ -10,9 +12,11 @@
 
   import HeaderComp from '@/components/HeaderComponent'
   import FooterComp from '@/components/FooterComponent'
+  import BackgroundComp from '@/components/BackgroundSvg.vue'
 
   export default {
     components: {
+      BackgroundComp,
       FooterComp,
       HeaderComp
     },
