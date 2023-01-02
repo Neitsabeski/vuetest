@@ -1,17 +1,41 @@
 .navbar {
-    background-color: rgba(0, 0, 0, 0.278);
-    position : fixed;
-    top: -0px;
-    z-index: 5;
-    width: 100%;
-    color: white;
-  }
+  background-color: rgba(0, 0, 0, 0.278);
+  position : fixed;
+  top: -0px;
+  z-index: 5;
+  width: 100%;
+  color: white;
+}
 
-  .nav-item .nav-link, .nav-link a {
-    color: white;
-    text-decoration: none;
-  }
+.nav-item .nav-link, .nav-link a {
+  color: white;
+  text-decoration: none;
+}
   
-  .nav-link .navbar-brand{
-    color: $myPurple;
-  }
+.navbar-brand a{
+  color: $myPurple;
+}
+
+.nav-link a:hover {
+  color: aqua;
+}
+
+.nav-item .nav-link a:hover{
+  border-bottom: solid 1px aqua;
+}
+
+.notReady {
+  filter: invert(0.5);
+}
+
+.dropdown-menu a {
+  color: black;
+}
+
+.dropdown-menu .nav-link a:hover {
+  color: $myPink;
+}
+
+.dropdown-menu {
+  padding: 10px;
+}

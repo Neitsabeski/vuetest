@@ -1,12 +1,12 @@
 .card {
-    max-width: 100%;
     background-color: white;
     border-radius: 16px;
-    padding: 20px;
+    padding: 20px 0;
+    margin: 10px;
   }
   
   .card_action {
-      color: $myPurple;
+      color: $myPink;
       text-decoration: underline;
   }
   

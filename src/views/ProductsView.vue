@@ -33,27 +33,24 @@
                                     <!-- CARDS -->
                                     <div v-for="product in products" v-bind:key=product.id class="col-md-3 card  p-3 mb-2">
                                         <img class="card-img-top" src="../../public/img/products/noimage.png" alt=""/>
-
                                         <div class="card-body">
                                             <div class="card-title">
                                                 <h5>{{ product.title }}</h5>
                                             </div>
-                                            <div>
-                                                <p>stock : {{ product.stock }}</p>
-                                            </div>
-                                            
-                                            <div>
-                                                <p>{{ product.price }} €</p>
-                                                <p>{{ product.format.name }}</p>
-                                            </div>
-                                            
-                                            <div v-for="genre in product.genres" v-bind:key="genre.id">
-                                                <span>{{ genre.name }}</span>
-                                            </div>
-                                            <div>
-                                                <button v-on:click="addToCart(product)" class="btn btn-primary">Add to cart</button>
-                                            </div>
                                         </div>
+                                        <div class="card-body">
+                                            {{ product.format.name }}
+                                            stock : {{ product.stock }}
+                                            price : {{ product.price }} €
+                                        </div>
+                                        <div class="card-body">
+                                            <font-awesome-icon v-for="s in product.rating" v-bind:key="s" icon="star" />
+                                        </div>
+                                        <div class="card-body">
+                                            <button v-if="product.stock > 0" v-on:click="addToCart(product)" class="btn btn-primary"><font-awesome-icon icon="shopping-cart" /></button>
+                                            <button v-else v-on:click="addToCart(product)" class="btn btn-primary disabled"><font-awesome-icon icon="shopping-cart" /></button>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -66,7 +63,6 @@
                                     <span class="col"> next &#62; </span>
                                 </div>
                             </div>
-                            
                             
                         </div>
                     </div>

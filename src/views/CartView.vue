@@ -17,7 +17,7 @@
                                 <h4 class="col">price</h4>
                             </div>
 
-                            <div class="row" v-for="item in this.$store.state.cart">
+                            <div class="row" v-for="item in this.$store.state.cart" v-bind:key="item.product.id">
                                 <span class="col-md-1">{{ item.product.id }}</span>
                                 <span class="col-md-4">{{ item.product.title }}</span>
                                 <span class="col">{{ item.quantity }}</span>

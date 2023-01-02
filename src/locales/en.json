@@ -31,5 +31,7 @@
   "loginRegisterLink": "Login/Register",
   "logoutLink": "Logout",
   "contactLink": "Contact",
-  "offersLink": "Offers"
+  "offersLink": "Offers",
+  "profileLink": "My profile",
+  "ordersLink": "My orders"
 }

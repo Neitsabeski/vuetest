@@ -10,6 +10,12 @@
                         {{ $t('aboutLink')}}
                     </router-link>
                 </div>
+                <div>
+                    <router-link class="nav-link" to="/">
+                        <img src="../../public/logo.svg" class="logo"/>
+                    </router-link>
+                    
+                </div>
                 <div class="md-6">
                     © 2022 Copyright: ISL Wenkin & Gardier
                 </div>

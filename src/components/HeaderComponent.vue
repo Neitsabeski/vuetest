@@ -1,7 +1,9 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-      <div id="brand" class="nav-link navbar-brand"><router-link to="/">P R I M E F L I X</router-link></div>
+      <div class="nav-link navbar-brand">
+        <router-link to="/">P R I M E F L I X</router-link>
+      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -22,28 +24,28 @@
             </div>
           </li>
           <li class="nav-item">
-              <div class="nav-link disabled">
+              <div class="nav-link notReady">
                 {{ $t('filmsLink')}}
               </div>
           </li>
           <li class="nav-item">
-              <div class="nav-link disabled">
+              <div class="nav-link notReady">
                 {{ $t('seriesLink')}}
               </div>
           </li>
           <li class="nav-item">
-              <div class="nav-link disabled">
+              <div class="nav-link notReady">
                 {{ $t('offersLink')}}
               </div>
           </li>
         </ul>
-        <ul class="d-flex navbar-nav dropdown-toggle">
+        <ul class="d-flex justify-content-center align-items-center navbar-nav">
           
           <div class="nav-item">
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="..." aria-label="Search">
+            <form class="d-flex me-2">
+              <input class="form-control" type="search" placeholder="..." aria-label="Search">
               <button class="btn btn-primary" type="submit">
-                {{ $t('searchBtn')}}
+                <font-awesome-icon icon="search" />
               </button>
             </form>
           </div>
@@ -55,20 +57,46 @@
           <li class="nav-item">
             <div class="nav-link">
                 <router-link to="/cart">
-                  {{ $t('cartLink')}}({{ this.$store.state.cartCount }})
+                  {{ $t('cartLink')}} <font-awesome-icon icon="shopping-cart" />(<span class="pinky">{{ this.$store.state.cartCount }}</span>)
                 </router-link>
               </div>
           </li>
 
           <li class="nav-item">
+
+
+            
             <div v-if="status == ''" class="nav-link">
               <router-link to="/loginregister">
-                {{ $t('loginRegisterLink')}}
+                {{ $t('loginRegisterLink')}} <span class="pinky"><font-awesome-icon icon="sign-in" /></span>
               </router-link>
             </div>
-            <span v-if="status == 'logged'" class="nav-link">
-              {{ $t('logoutLink')}}
-            </span>
+            
+            <div v-if="status == 'logged'" class="nav-link">
+              
+              <ul class="navbar-nav">                
+                <li class="nav-item dropstart">
+                  <a class="dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ user.firstName || "User" }}<span class="pinky"><font-awesome-icon icon="user" /></span>
+                  </a>
+                  <ul class="dropdown-menu" >
+                    <li>
+                      <router-link to="/profile">
+                        {{ $t('profileLink')}}
+                      </router-link>
+                    </li>
+                    <li>
+                      <router-link to="/orders">
+                        {{ $t('ordersLink')}}
+                      </router-link>
+                    </li>
+                    <li>
+                        {{ $t('logoutLink')}}
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
@@ -83,8 +111,16 @@
 
     export default {
       components: { LocaleSwitcher, LocaleSwitcher },
+      data() {
+        user: "";
+      },
       computed: {
-          ...mapState(["status"])
+          ...mapState(["status"]),
+          
+        
+      },
+      mounted() {
+        this.user = this.$store.state.user;
       }
   }
 

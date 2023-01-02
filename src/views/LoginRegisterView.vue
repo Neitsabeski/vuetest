@@ -98,7 +98,7 @@
 
 
     export default {
-        name: 'Sign',
+        name: 'LoginRegister',
         components: {
             FBLogComp
         },
@@ -117,13 +117,20 @@
         computed: {
             validatedFields: function() {
                 if (this.mode == 'register'){
-                    if(this.email != "" && this.firstname != "" && this.lastname != "" && this.lang!= "" && this.phone!= "" && this.password!= "" && this.passwordverification!= ""){
+                    if(utils.ValidateEmail(this.email) 
+                        && utils.ValidateName(this.firstname)
+                        && utils.ValidateName(this.lastname)
+                        && this.lang!= "" 
+                        && utils.ValidatePhone(this.phone) 
+                        && utils.ValidatePassword(this.password) 
+                        && this.password == this.passwordverification){
                         return true;
                     } else {
                         return false;
                     }
                 } else {
-                    if(this.email != "" && this.password!= ""){
+                    if(this.email != "" 
+                        && this.password!= ""){
                         return true;
                     } else {
                         return false;
@@ -141,7 +148,7 @@
             },
             login: function(event){
 
-                utils.hashSha256(this.password);
+                //utils.hashSha256(this.password);
 
                 const self = this;
                 this.$store.dispatch('login', {

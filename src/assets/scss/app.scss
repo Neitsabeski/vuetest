@@ -47,12 +47,14 @@ h1 {
   color: white;
 }
 
-#brand {
-  color: $myPink;
+.logo {
+  width: 22px;
+  height: 22px;
+  filter: invert(0.5);
 }
 
-.nav-link .nav-brand #brand:hover  {
-  color: aqua;
+.logo:hover{
+  filter: invert(1);
 }
 
 .btn-primary:hover{
@@ -65,4 +67,8 @@ h1 {
   color: white;
   background-color: $myPink;
   border-color: $myPink;
+}
+
+.pinky {
+  color: $myPink;
 }
