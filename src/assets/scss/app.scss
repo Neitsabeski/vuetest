@@ -23,24 +23,15 @@
   padding-top: 60px;
 }
 
-body {
+
+body{
+  position: relative;
+  padding-bottom: 7.4em;
   background-color: $myPurple;
   min-height: 100vh;
-  background-image:
-      radial-gradient(
-          circle farthest-corner at top left, $myPink 0%, $myBlue 50%),
-      radial-gradient(
-          circle farthest-corner at top right, $myPurple 0%, $myPurple 10%),
-      radial-gradient(
-          circle farthest-corner at bottom right, $myPink 0%, $myPink 33%),
-      radial-gradient(
-          circle farthest-side at bottom left, $myPink 0%, $myPink 33%),
-      radial-gradient(
-          ellipse at bottom center, $myPink 0%, $myPink 80%);
-  
 }
 
-h1 {
+h1, h2, h3, h4, h5 {
   color: white;
 }
 
@@ -72,7 +63,7 @@ h1 {
 
 .pannel {
   background-color: $myDarkTransparent;
-  padding: 20px 5px 5px 5px;
+  padding: 20px 5px 20px 5px;
   color: white;
 }
 

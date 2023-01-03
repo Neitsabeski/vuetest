@@ -1,20 +1,27 @@
 <template>
     <div class="cart">
-        <h1>{{ $t('cart.title')}}</h1>
-        <section class="h-100 gradient-form bg-light">
+        <section class="h-100 gradient-form">
             <div class="container py-5 h-100">
-                <div class="row d-flex justify-content-center align-items-center h-100">
+                <h1>{{ $t('cart.title') }}</h1>
+                <div class="row d-flex justify-content-center align-items-center h-100 pannel">
                     <div class="col-xl-10">
 
-                        <h2>Cart</h2>
+                        <div class="row g-0 d-flex justify-content-center">
+                            <div class="col-lg-6 ">
+                                <div class="text-center">
+                                    <h2 v-if="this.$store.state.cartCount > 0" class="card_title">
+                                        {{ $t('cart.subTitle') }}</h2>
+                                    <h2 v-else>{{ $t('cart.empty') }}</h2>
+                                </div>
+                            </div>
+                        </div>
 
                         <div v-if="this.$store.state.cartCount > 0">
-                            <h3>This is your cart</h3>
                             <div class="row">
                                 <h4 class="col-md-1">#</h4>
-                                <h4 class="col-md-4">title</h4>
-                                <h4 class="col">quantity</h4>
-                                <h4 class="col">price</h4>
+                                <h4 class="col-md-4">{{ $t('cart.productTitleHeader') }}</h4>
+                                <h4 class="col">{{ $t('cart.productQuantityHeader') }}</h4>
+                                <h4 class="col">{{ $t('cart.productPriceHeader') }}</h4>
                             </div>
 
                             <div class="row" v-for="item in this.$store.state.cart" v-bind:key="item.product.id">
@@ -27,17 +34,14 @@
 
                             <div class="row">
                                 <span class="col-md-5"></span>
-                                <h4 class="col">Subtotal</h4>
+                                <h4 class="col">{{ $t('cart.subtotal') }}</h4>
                                 <h4 class="col">??? €</h4>
                             </div>
 
                             <div class="row">
-                                <button class="col btn btn-primary" type="submit" :class="{'disabled' : !canPurchase}">Purchase</button>
+                                <button class="col btn btn-primary" type="submit"
+                                    :class="{ 'disabled': !canPurchase }">Purchase</button>
                             </div>
-                        </div>
-
-                        <div v-else>
-                            <h3>Cart is empty</h3>
                         </div>
                     </div>
                 </div>
@@ -45,16 +49,18 @@
         </section>
     </div>
 </template>
+  
+
 
 <script>
 
-    export default {
-        computed: {
-            canPurchase: function(){
-                return this.$store.state.cartCount > 0 && this.$store.state.status == 'logged';
-            }
-        },
-    }
+export default {
+    computed: {
+        canPurchase: function () {
+            return this.$store.state.cartCount > 0 && this.$store.state.status == 'logged';
+        }
+    },
+}
 
 
 </script>

@@ -4,7 +4,7 @@
       <div class="nav-link navbar-brand">
         <router-link to="/">P R I M E F L I X</router-link>
       </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -43,7 +43,7 @@
           
           <div class="nav-item">
             <form class="d-flex me-2">
-              <input class="form-control" type="search" placeholder="..." aria-label="Search">
+              <input class="form-control" type="search" v-bind:placeholder="$t('searchField')" aria-label="Search">
               <button class="btn btn-primary" type="submit">
                 <font-awesome-icon icon="search" />
               </button>
@@ -63,9 +63,6 @@
           </li>
 
           <li class="nav-item">
-
-
-            
             <div v-if="status == ''" class="nav-link">
               <router-link to="/loginregister">
                 {{ $t('loginRegisterLink')}} <span class="pinky"><font-awesome-icon icon="sign-in" /></span>
@@ -73,7 +70,6 @@
             </div>
             
             <div v-if="status == 'logged'" class="nav-link">
-              
               <ul class="navbar-nav">                
                 <li class="nav-item dropstart">
                   <a class="dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -122,6 +118,6 @@
       mounted() {
         this.user = this.$store.state.user;
       }
-  }
+    }
 
 </script>

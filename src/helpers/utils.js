@@ -24,8 +24,26 @@ var utils = {
         }
     },
 
+    ValidateFullName(name) {
+        var validRegex = /^[àèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ\sA-Za-z]{3,50}$/;
+        if(name.match(validRegex)){
+            return true;
+        } else {
+            return false;
+        }
+    },
+
+    ValidateText(text) {
+        var validRegex = /^[:"'.,!?-àèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ\sA-Za-z]{8,}$/;
+        if(text.match(validRegex)){
+            return true;
+        } else {
+            return false;
+        }
+    },
+
     ValidateName(name) {
-        var validRegex = /^[A-Za-z]{3,}$/;
+        var validRegex = /^[àèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœA-Za-z]{3,15}$/;
         if(name.match(validRegex)){
             return true;
         } else {

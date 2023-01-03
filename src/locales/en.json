@@ -3,16 +3,33 @@
     "title": "Home"
   },
   "products":{
-    "title": "Products"
+    "title": "Products",
+    "subTitle": "Products catalog",
+    "previousBtn": "previous",
+    "nextBtn": "next",
+    "filters": "Filters"
   },
   "about":{
-    "title": "About"
+    "title": "About",
+    "subTitle": "PRIMEFLIX, what else ?",
+    "salesLaw": "General conditions of sale",
+    "datasUses": "Use of personal datas",
+    "own": "Primeflix",
+    "partners": "Partners"
   },
   "contact":{
-    "title": "Contact"
+    "title": "Contact",
+    "subTitle": "Contact us !"
   },
   "cart":{
-    "title": "Carte"
+    "title": "Cart",
+    "subTitle": "Your cart",
+    "purchaseBtn": "Purchase",
+    "productTitleHeader": "Title",
+    "productQuantityHeader": "Quantity",
+    "productPriceHeader": "Price",
+    "subtotal": "Subtotal",
+    "empty": "Cart is empty"
   },
   "loginRegister":{
     "title": "Login/Register"

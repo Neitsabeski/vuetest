@@ -3,16 +3,33 @@
     "title": "Accueil"
   },
   "products":{
-    "title": "Produits"
+    "title": "Produits",
+    "subTitle": "Catalogue des produits",
+    "previousBtn": "précedent",
+    "nextBtn": "suivant",
+    "filters": "Filtres"
   },
   "about":{
-    "title": "A propos"
+    "title": "A propos",
+    "subTitle": "Primeflix, mais encore ?",
+    "salesLaw": "Conditions générales des ventes",
+    "datasUses": "Utilisation des données personnelles ",
+    "own": "Primeflix",
+    "partners": "Partenaires"
   },
   "contact":{
-    "title": "Contact"
+    "title": "Contact",
+    "subTitle": "Contactez-nous !"
   },
   "cart":{
-    "title": "Panier"
+    "title": "Panier",
+    "subTitle": "Votre panier",
+    "purchaseBtn": "Commander",
+    "productTitleHeader": "Titre",
+    "productQuantityHeader": "Quantité",
+    "productPriceHeader": "Prix",
+    "subtotal": "Sous total",
+    "empty": "Le panier est vide"
   },
   "loginRegister":{
     "title": "Authentification"
