@@ -123,7 +123,7 @@
                 passwordverification: ''
             }
         },
-        computed: {
+        computed: {  
             validatedFields: function () {
                 if (this.mode == 'register') {
                     if (utils.ValidateEmail(this.email)

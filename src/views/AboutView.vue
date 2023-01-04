@@ -10,13 +10,16 @@
                             <div class="col-lg-6 ">
                                 <div class="text-center">
                                     <h2 class="card_title">{{ $t('about.subTitle') }}</h2>
+                                    <img src="../../public/logo.svg" class="logow"/>
                                 </div>
                             </div>
-
+                            
                             <div>
                                 <div>
                                     <h3>
-                                        {{ $t('about.salesLaw') }}
+                                        <span class="pinky">
+                                            {{ $t('about.salesLaw') }}
+                                        </span>
                                     </h3>
                                     <p>
                                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae amet blanditiis temporibus officia autem eius deserunt earum reiciendis culpa impedit, rerum quod explicabo fugit quasi sequi iure expedita voluptate reprehenderit.
@@ -25,7 +28,9 @@
 
                                 <div>
                                     <h3>
-                                        {{ $t('about.partners') }}
+                                        <span class="pinky">
+                                            {{ $t('about.partners') }}
+                                        </span>
                                     </h3>
                                     <p>
                                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate cumque eius ut dolores tempora facilis laboriosam quibusdam nesciunt itaque? Quam laboriosam, fuga commodi cum adipisci neque nihil blanditiis tempora deleniti.
@@ -33,7 +38,9 @@
                                 </div>
                                 <div>
                                     <h3>
-                                        {{ $t('about.datasUses') }}
+                                        <span class="pinky">
+                                            {{ $t('about.datasUses') }}
+                                        </span>
                                     </h3>
                                     <h4>
                                         Stripes
@@ -51,7 +58,9 @@
                                 </div>
                                 <div>
                                     <h3>
-                                        {{ $t('about.own') }}
+                                        <span class="pinky">
+                                            {{ $t('about.own') }}
+                                        </span>
                                     </h3>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis ex dolore laudantium enim, eligendi similique natus omnis tempora nihil unde optio ipsam, quod, quam iste earum officiis mollitia officia neque.

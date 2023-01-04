@@ -68,7 +68,7 @@
                                         </div>
                                     </div>
                                     <!-- PAGES SELECTION -->
-                                    <div class="container mt-5 mb-3  justify-content-center">
+                                    <div class="container mt-5 mb-3 justify-content-center">
                                         <div class="row pinky">
                                             <div class="col">
                                                 <span v-if="currentPage > 1" class="card_action" @click="changePage('-')"> &#60; {{ $t('products.previousBtn')}} </span>

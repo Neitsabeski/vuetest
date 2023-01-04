@@ -19,7 +19,14 @@
   },
   "contact":{
     "title": "Contact",
-    "subTitle": "Contact us !"
+    "subTitle": "Contact us !",
+    "placeholderEmail": "Email address",
+    "placeholderFullName": "Full Name",
+    "placeholderSubject": "Subject",
+    "placeholderMessage": "Message",
+    "sendBtn": "Send",
+    "backBtn": "Back",
+    "sendedMessage": "Message sent."
   },
   "cart":{
     "title": "Cart",

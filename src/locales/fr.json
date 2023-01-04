@@ -19,7 +19,14 @@
   },
   "contact":{
     "title": "Contact",
-    "subTitle": "Contactez-nous !"
+    "subTitle": "Contactez-nous !",
+    "placeholderEmail": "Adresse email",
+    "placeholderFullName": "Nom complet",
+    "placeholderSubject": "Sujet du message",
+    "placeholderMessage": "Message",
+    "sendBtn": "Envoyer",
+    "backBtn": "Retour",
+    "sendedMessage": "Message envoyé."
   },
   "cart":{
     "title": "Panier",
