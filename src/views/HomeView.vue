@@ -3,8 +3,8 @@
     <section class="h-100 gradient-form ">
       <div class="container py-5 h-100">
         <h1>{{ $t('home.title')}}</h1>
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-xl-20 pannel">
+        <div class="row d-flex justify-content-center align-items-center h-100 pannel">
+          <div class="col-xl-20">
             
             <div class="row g-0 d-flex justify-content-center">
                 <div class="col-lg-6 ">

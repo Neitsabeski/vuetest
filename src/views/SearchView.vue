@@ -8,7 +8,7 @@
                         <div class="row g-0 d-flex justify-content-center">
                             <div class="col-lg-6 ">
                                 <div class="text-center">
-                                    <h2 class="card_title">Search</h2>
+                                    <h2 class="card_title">Oups, no result...</h2>
                                 </div>
                             </div>
                         </div>

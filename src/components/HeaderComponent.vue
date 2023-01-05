@@ -42,12 +42,12 @@
         <ul class="d-flex justify-content-center align-items-center navbar-nav">
           
           <div class="nav-item">
-            <form class="d-flex me-2">
-              <input class="form-control" type="search" v-bind:placeholder="$t('searchField')" aria-label="Search">
-              <button class="btn btn-primary" type="submit">
-                <font-awesome-icon icon="search" />
+            <div class="d-flex me-2">
+              <input v-model="searchField" class="form-control" type="search" v-bind:placeholder="$t('searchField')" aria-label="Search">
+              <button class="btn btn-primary" @click="search">
+                  <font-awesome-icon icon="search" />
               </button>
-            </form>
+            </div>
           </div>
           
           <li class="nav-item">
@@ -107,16 +107,26 @@
 
     export default {
       components: { LocaleSwitcher, LocaleSwitcher },
-      data() {
-        user: "";
+      data: function() {
+        return {
+          user: '',
+          searchField: ''
+        }
+        
       },
       computed: {
           ...mapState(["status"]),
-          
-        
+
       },
       mounted() {
         this.user = this.$store.state.user;
+      },
+      methods: {
+        search: function(event){
+          const self = this;
+          this.searchField = '';
+          self.$router.push('search');
+        }
       }
     }
 

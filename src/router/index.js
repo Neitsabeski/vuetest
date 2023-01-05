@@ -5,6 +5,8 @@ import ProfileView from '../views/ProfileView.vue'
 import ProductsView from '../views/ProductsView.vue'
 import ContactView from '../views/ContactView.vue'
 import CartView from '../views/CartView.vue'
+import ProductView from '../views/ProductView.vue'
+import SearchView from '../views/SearchView'
 
 const routes = [
   {
@@ -16,6 +18,16 @@ const routes = [
     path: '/products',
     name: 'products',
     component: ProductsView
+  },
+  {
+    path: '/products/:id',
+    name: 'product',
+    component: ProductView
+  },
+  {
+    path: '/search',
+    name: 'search',
+    component: SearchView
   },
   {
     path: '/cart',

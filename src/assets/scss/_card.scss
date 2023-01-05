@@ -35,7 +35,7 @@
     z-index: 100;
 }
 
-.product {
+.productItem {
     background-color: $myDarkTransparent;
     border-radius: 0px;
     padding:  10px;
@@ -46,20 +46,24 @@
     text-align: center;
 }
 
-.product .card-body{
+.productItem .card-body{
     padding: 5px 0px 0  0px ;
     height: 50px;
 }
 
-.product .card-title {
+.productItem .card-title {
     overflow: hidden;
     font-size: 12px;
 }
 
-.product a{
+.productItem a, .plink a{
     color: $myPink;
   }
   
-.product a:hover {
+.productItem a:hover, .plink a:hover {
     color: aqua;
   }
+
+  .product .cadre img {
+    width: 300px;
+}

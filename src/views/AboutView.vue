@@ -25,7 +25,7 @@
                                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae amet blanditiis temporibus officia autem eius deserunt earum reiciendis culpa impedit, rerum quod explicabo fugit quasi sequi iure expedita voluptate reprehenderit.
                                     </p>
                                 </div>
-
+                                <hr/>
                                 <div>
                                     <h3>
                                         <span class="pinky">
@@ -36,6 +36,7 @@
                                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate cumque eius ut dolores tempora facilis laboriosam quibusdam nesciunt itaque? Quam laboriosam, fuga commodi cum adipisci neque nihil blanditiis tempora deleniti.
                                     </p>
                                 </div>
+                                <hr/>
                                 <div>
                                     <h3>
                                         <span class="pinky">
@@ -56,6 +57,7 @@
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi commodi velit, alias dolor facere, delectus impedit tempore labore, ullam quidem! Ratione assumenda, consequatur ipsum alias rem eligendi cumque voluptate?
                                     </p>
                                 </div>
+                                <hr/>
                                 <div>
                                     <h3>
                                         <span class="pinky">
@@ -64,6 +66,9 @@
                                     </h3>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis ex dolore laudantium enim, eligendi similique natus omnis tempora nihil unde optio ipsam, quod, quam iste earum officiis mollitia officia neque.
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ut omnis animi modi odio tempora vitae sed rem neque obcaecati totam molestias repudiandae quisquam nihil, consequuntur voluptatibus, quia nisi. Cupiditate.
                                     </p>
                                 </div>                                
                             </div>

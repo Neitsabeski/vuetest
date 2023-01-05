@@ -26,7 +26,11 @@
 
                             <div class="row" v-for="item in this.$store.state.cart" v-bind:key="item.product.id">
                                 <span class="col-md-1">{{ item.product.id }}</span>
-                                <span class="col-md-4">{{ item.product.title }}</span>
+                                <span class="col-md-4 plink">
+                                    <RouterLink v-bind:to="'/products/' + item.product.id">
+                                        {{ item.product.title }}
+                                    </RouterLink>
+                                </span>
                                 <span class="col">{{ item.quantity }}</span>
                                 <span class="col">{{ item.product.price * item.quantity }} €</span>
                                 <hr />
@@ -40,7 +44,7 @@
 
                             <div class="row">
                                 <button class="col btn btn-primary" type="submit"
-                                    :class="{ 'disabled': !canPurchase }">Purchase</button>
+                                    :class="{ 'disabled': !canPurchase }">{{ $t('cart.purchaseBtn') }}</button>
                             </div>
                         </div>
                     </div>

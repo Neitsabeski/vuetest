@@ -25,9 +25,10 @@
 
 
 body{
+  overflow: scroll;
   position: relative;
   padding-bottom: 7.4em;
-  background-color: $myPurple;
+  background-color: $myBlue;
   min-height: 100vh;
 }
 

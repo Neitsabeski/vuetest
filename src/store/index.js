@@ -171,7 +171,7 @@ const store = createStore({
                 "title": "12 angry men",
                 "releaseDate": "1957-01-01T00:00:00",
                 "stock": 0,
-                "rating": 3,
+                "rating": 3.5,
                 "format": {
                     "id": 1,
                     "name": "Film"
