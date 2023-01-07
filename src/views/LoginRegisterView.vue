@@ -73,6 +73,11 @@
                                             {{ $t('loginRegister.badLog') }}
                                         </span>
                                     </div>
+                                    <div v-if="mode == 'register' && status == 'error_login'">
+                                        <span>
+                                            {{ $t('loginRegister.badReg') }}
+                                        </span>
+                                    </div>
                                 </div>
                                 <div class="d-flex justify-content-center group form-outline mb-4">
                                     <div v-if="mode == 'login'">
@@ -131,7 +136,10 @@
                 passwordverification: ''
             }
         },
-        computed: {  
+        mounted(){
+            if(this.$store.getters.getUser.userId > 0) this.$router.push('profile');
+        },
+        computed: {
             validatedFields: function () {
                 if (this.mode == 'register') {
                     if (utils.ValidateEmail(this.email)
@@ -172,10 +180,10 @@
                     email: this.email,
                     password: this.password
                 }).then(function (response) {
-                    console.log(response);
-                    self.$router.push('profile');
+                    //console.log(response);
+                    self.$router.push('/profile');
                 }, function (error) {
-                    console.log(error);
+                    //console.log(error);
                 })
             },
             register: function (event) {
@@ -188,10 +196,10 @@
                     lang: this.lang,
                     password: this.password
                 }).then(function (response) {
-                    console.log(response);
+                    //console.log(response);
                     self.login();
                 }, function (error) {
-                    console.log(error);
+                    //console.log(error);
                 })
             },
         }

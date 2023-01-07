@@ -57,8 +57,17 @@ const store = createStore({
         setStatus: function(state, status) {
             state.status = status;
         },
-        logUser: function(state, user) {
-            state.user = user;
+        logUser: function(state, data) {
+            console.log(data[0]);
+            state.user.userId = data[0].id;
+            state.user.token = data[0].token;
+            console.log(state.user);
+        },
+        logOut: function(state){
+            state.user.userId = -1;
+            state.user.token  = '';
+            state.user.data = {};
+            state.status = '';
         },
 
         setProducts: function(state, data){
@@ -136,6 +145,9 @@ const store = createStore({
     },
     actions: {
         register: ({commit}, userInfos) => {
+
+            console.log(userInfos)
+
             commit('setStatus', 'loading');
             return new Promise((resolve, reject) => {
                 instance.post('/users/register', userInfos)
@@ -153,7 +165,7 @@ const store = createStore({
 
             commit('setStatus', 'loading');
             return new Promise((resolve, reject) => {
-                instance.post('/users/login', userInfos)
+                instance.get('/users', userInfos)
                 .then(function (response) {
                     commit('setStatus', 'logged');
                     commit('logUser', response.data);

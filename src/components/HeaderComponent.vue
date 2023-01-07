@@ -68,7 +68,7 @@
           </li>
 
           <li class="nav-item">
-            <div v-if="status == ''" class="nav-link">
+            <div v-if="status != 'logged'" class="nav-link">
               <router-link to="/loginregister">
                 {{ $t('loginRegisterLink')}} <span class="pinky"><font-awesome-icon icon="sign-in" /></span>
               </router-link>
@@ -92,7 +92,9 @@
                       </router-link>
                     </li>
                     <li>
+                      <span class="card_action" @click="logOut">
                         {{ $t('logoutLink')}}
+                      </span>
                     </li>
                   </ul>
                 </li>
@@ -134,6 +136,11 @@
         },
         setFormat(format){
           this.$store.commit('setFormat', format)
+        },
+        logOut(){
+          console.log("logout");
+          this.$store.commit('logOut');
+          this.$router.push('/loginRegister');
         }
       }
     }

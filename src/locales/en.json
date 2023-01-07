@@ -80,7 +80,8 @@
     "loginBtn":"Login",
     "registerBtn":"Register",
     "forgotPassword":"Forgot password ?",
-    "badLog":"Bad email and/or password"
+    "badLog":"Bad email and/or password",
+    "badReg":"Bad datas inserted"
   },
   "profile":{
   "title": "Profiles"

@@ -80,7 +80,8 @@
     "loginBtn":"Connexion",
     "registerBtn":"Inscription",
     "forgotPassword":"Mot de passe oublié ?",
-    "badLog":"Mauvais email et/ou mot de passe"
+    "badLog":"Mauvais email et/ou mot de passe",
+    "badReg":"Mauvaises données insérées"
   },
   "profile":{
     "title": "Profile"
