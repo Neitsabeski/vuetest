@@ -1,4 +1,7 @@
-const { defineConfig } = require('@vue/cli-service')
+const { defineConfig } = require('@vue/cli-service');
+
+const fs = require('fs');
+
 module.exports = defineConfig({
   transpileDependencies: true,
 
@@ -9,6 +12,8 @@ module.exports = defineConfig({
       localeDir: 'locales',
       enableInSFC: true
     }
-  }
-})
-
+  },
+  devServer: {
+    https: true,
+   }
+});

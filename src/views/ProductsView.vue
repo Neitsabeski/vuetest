@@ -171,16 +171,20 @@ export default {
         changePage: function (char) {
             switch (char) {
                 case '-':
-                    this.params.page -= 1;
-                    console.log('-');
+                    if(this.params.page > 1){
+                        this.params.page -= 1;
+                        this.getProducts();
+                    }
                     break;
                 case '+':
-                    this.params.page += 1;
-                    console.log('+');
+                    if(this.params.page < this.totalPage){
+                        this.params.page += 1;
+                        this.getProducts();
+                    }
                     break;
                 default:
             }
-            this.getProducts();
+            
         },
         setFormat(){
             this.params.format = this.formatPicked;
