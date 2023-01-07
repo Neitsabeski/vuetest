@@ -13,12 +13,12 @@
 
                                 <div class="row">
                                     <div class="col">
-                                        <p>UserId : {{ userId }}</p>
-                                        <p>Firstname : {{ firstname }}</p>
-                                        <p>Lastname : {{ lastname }}</p>
-                                        <p>Phone : {{ lastname }}</p>
-                                        <p>Lang : {{ lang }}</p>
-                                        <p>Token : {{ token }}</p>
+                                        <p>UserId : {{ user.userId || emptyField }}</p>
+                                        <p>Firstname : {{ user.firstname || emptyField }}</p>
+                                        <p>Lastname : {{ user.lastname || emptyField }}</p>
+                                        <p>Phone : {{ user.phone || emptyField }}</p>
+                                        <p>Lang : {{ user.lang || emptyField }}</p>
+                                        <p>Token : {{ user.token || emptyField }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -37,11 +37,8 @@ export default {
     data: function () {
         return {
             user: {},
-            userId: '<>',
-            firstname: '<>',
-            lastname: '<>',
-            lang: '<>',
-            token: '<>',
+            emptyField: '< >',
+            
         }
     },
     mounted: function () {
