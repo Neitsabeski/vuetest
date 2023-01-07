@@ -1,13 +1,37 @@
 {
   "home":{
-    "title": "Accueil"
+    "title": "Accueil",
+    "subTitle": "Ajout récent",
+    "noProducts": "Primeflix"
+  },
+  "notFound":{
+    "title": "404",
+    "subTitle": "Non trouvé"
+  },
+  "search":{
+    "title": "Recherche",
+    "subTitle": "Résultats de la recherche",
+    "noResult": "Pas de résultats"
   },
   "products":{
     "title": "Produits",
     "subTitle": "Catalogue des produits",
+    "noProducts": "Aucun produits",
     "previousBtn": "précedent",
     "nextBtn": "suivant",
     "filters": "Filtres"
+  },
+  "product":{
+    "title": "Produit",
+    "rating": "Note",
+    "released": "Parution",
+    "summary": "Résumé",
+    "genres": "Genres",
+    "directors": "Réalisateurs",
+    "actors": "Acteurs",
+    "stock": "Stock",
+    "price": "Prix",
+    "format": "Format"
   },
   "about":{
     "title": "A propos",
@@ -39,7 +63,24 @@
     "empty": "Le panier est vide"
   },
   "loginRegister":{
-    "title": "Authentification"
+    "title": "Authentification",
+    "registerSubTitle": "Inscription",
+    "loginSubTitle": "Connexion",
+    "noAccount":"Vous n'avez pas encore de compte ? ",
+    "alreadyAccount":"Vous avez des un compte ? ",
+    "registerHere":"Inscrivez-vous ici",
+    "loginHere":"Connectez-vous ici",
+    "emailField":"Adresse email",
+    "firstNameField":"Prénom",
+    "lastNameField":"Nom",
+    "phoneField":"téléhpone",
+    "languageSelect":"Langue",
+    "passwordField": "Mot de passe",
+    "passwordVerifField":"Vérification du mot de passe",
+    "loginBtn":"Connexion",
+    "registerBtn":"Inscription",
+    "forgotPassword":"Mot de passe oublié ?",
+    "badLog":"Mauvais email et/ou mot de passe"
   },
   "profile":{
     "title": "Profile"

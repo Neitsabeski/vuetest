@@ -7,6 +7,7 @@ import ContactView from '../views/ContactView.vue'
 import CartView from '../views/CartView.vue'
 import ProductView from '../views/ProductView.vue'
 import SearchView from '../views/SearchView'
+import NotFound from '../views/NotFoundView'
 
 const routes = [
   {
@@ -15,19 +16,21 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/products',
+    path: '/products/',
     name: 'products',
-    component: ProductsView
+    component: ProductsView,
+    props: true
   },
   {
     path: '/products/:id',
     name: 'product',
+    props: true,
     component: ProductView
   },
   {
     path: '/search',
     name: 'search',
-    component: SearchView
+    component: SearchView,
   },
   {
     path: '/cart',
@@ -56,6 +59,11 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: ContactView
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: 'notFound',
+    component: NotFound 
   }
 ]
 

@@ -20,6 +20,9 @@
       FooterComp,
       HeaderComp
     },
+    created(){
+      this.$store.getters.getStatus;
+    }
   }
 
 </script>

@@ -6,6 +6,7 @@
 @import './card';
 @import './form';
 @import './background';
+@import './products';
 
 .transparent {
     background-color: rgba(255, 255, 255, 0.5);
@@ -36,25 +37,14 @@ h1, h2, h3, h4, h5 {
   color: white;
 }
 
-.logo {
-  width: 22px;
-  height: 22px;
-  filter: invert(0.5);
-}
-
-.logo:hover{
-  filter: invert(1);
-}
-
-.logow {
-  width: 25%;
-  filter: invert(1);
-}
-
 .btn-primary:hover{
   color:$myPink;
   background-color: white;
   border-color: $myPink;
+}
+
+.btn {
+  z-index: 100;
 }
 
 .btn.btn-primary.disabled, .btn.btn-primary:disabled, .btn-primary, .btn-primary:active:focus{
@@ -71,8 +61,23 @@ h1, h2, h3, h4, h5 {
   background-color: $myDarkTransparent;
   padding: 20px 5px 20px 5px;
   color: white;
+
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .container {
   min-width: 75%;
+}
+
+  
+.logow {
+  width: 25%;
+  filter: invert(1);
+}
+
+.page-select {
+  width: 100%;
+  height: 60px;
+  padding-top: 20px;
 }

@@ -16,6 +16,7 @@ function loadLocaleMessages() {
       messages[locale] = locales(key).default
     }
   })
+
   return messages
 }
 

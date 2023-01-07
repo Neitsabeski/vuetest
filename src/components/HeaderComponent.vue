@@ -18,20 +18,25 @@
           </li>
           <li class="nav-item">
             <div class="nav-link">
-              <router-link to="/products">
+              <router-link to="/products" @click="setFormat('All')">
                 {{ $t('productsLink')}}
               </router-link>
             </div>
           </li>
           <li class="nav-item">
-              <div class="nav-link notReady">
-                {{ $t('filmsLink')}}
-              </div>
+            <div class="nav-link" >
+                <router-link to="/products" @click="setFormat('films')">
+                  {{ $t('filmsLink')}}
+                </router-link>
+            </div>
           </li>
           <li class="nav-item">
-              <div class="nav-link notReady">
+            <div class="nav-link">
+              <router-link to="/products" @click="setFormat('series')">
                 {{ $t('seriesLink')}}
-              </div>
+              </router-link>
+                
+            </div>
           </li>
           <li class="nav-item">
               <div class="nav-link notReady">
@@ -125,7 +130,10 @@
         search: function(event){
           const self = this;
           this.searchField = '';
-          self.$router.push('search');
+          self.$router.push('/search');
+        },
+        setFormat(format){
+          this.$store.commit('setFormat', format)
         }
       }
     }

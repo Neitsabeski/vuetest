@@ -1,281 +1,70 @@
 import { createStore } from 'vuex'
+import i18n from '../i18n'
+import utils from '@/helpers/utils';
 
 const axios = require('axios');
 
 const instance = axios.create({
-    baseURL: 'https://virtserver.swaggerhub.com/SEBASTIENGARDIER/primeflix/1.0.0'
+    //baseURL: 'https://virtserver.swaggerhub.com/SEBASTIENGARDIER/primeflix/1.0.0'
     //baseURL: 'https://localhost:5000/api/'
+    baseURL: 'http://localhost:3000/'
 });
+
+
+
 
 // Create a new store instance.
 const store = createStore({
-    
+
     state: {
         status: '',
+        
         user: {
             userId: -1,
             data: {},
             token: '',
         },
+        
+        products: [],
+        totalPages: 1,
+        currentPage: 1,
+        pageSize: 5,
+
+        lang: 'en',
+        recentlyAdded: 'false',
+        format: '',
+        genre: '',
+        
+        currentProduct: null,
+        
         cart: [],
         cartCount: 0,
-        products: [
-            {
-                "id": 1,
-                "title": "The shawshank redemption",
-                "releaseDate": "1994-01-01T00:00:00",
-                "stock": 5,
-                "rating": 5,
-                "format": {
-                    "id": 1,
-                    "name": "Film"
-                },
-                "pictureUrl": "https://i.ytimg.com/vi/19THOH_dvxg/movieposter_en.jpg",
-                "price": 3.0,
-                "genres": [
-                    {
-                        "id": 3,
-                        "name": "Drama"
-                    }
-                ]
-            },
-            {
-                "id": 2,
-                "title": "The godfather",
-                "releaseDate": "1972-01-01T00:00:00",
-                "stock": 2,
-                "rating": 5,
-                "format": {
-                    "id": 1,
-                    "name": "Film"
-                },
-                "pictureUrl": "https://m.media-amazon.com/images/I/714ZOEiVNtL._RI_.jpg",
-                "price": 4.0,
-                "genres": [
-                    {
-                        "id": 3,
-                        "name": "Drama"
-                    },
-                    {
-                        "id": 5,
-                        "name": "Crime"
-                    }
-                ]
-            },
-            {
-                "id": 3,
-                "title": "The dark knight",
-                "releaseDate": "2008-01-01T00:00:00",
-                "stock": 3,
-                "rating": 4,
-                "format": {
-                    "id": 1,
-                    "name": "Film"
-                },
-                "pictureUrl": "https://images.moviesanywhere.com/bd47f9b7d090170d79b3085804075d41/c6140695-a35f-46e2-adb7-45ed829fc0c0.jpg",
-                "price": 3.5,
-                "genres": [
-                    {
-                        "id": 3,
-                        "name": "Drama"
-                    },
-                    {
-                        "id": 5,
-                        "name": "Crime"
-                    },
-                    {
-                        "id": 6,
-                        "name": "Action"
-                    }
-                ]
-            },
-            {
-                "id": 4,
-                "title": "The lord of the rings - the return of the king",
-                "releaseDate": "2003-01-01T00:00:00",
-                "stock": 0,
-                "rating": 4,
-                "format": {
-                    "id": 1,
-                    "name": "Film"
-                },
-                "pictureUrl": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
-                "price": 2.5,
-                "genres": [
-                    {
-                        "id": 6,
-                        "name": "Action"
-                    },
-                    {
-                        "id": 3,
-                        "name": "Drama"
-                    },
-                    {
-                        "id": 7,
-                        "name": "Adventure"
-                    }
-                ]
-            },
-            {
-                "id": 5,
-                "title": "Schindler's list",
-                "releaseDate": "1993-01-01T00:00:00",
-                "stock": 1,
-                "rating": 3,
-                "format": {
-                    "id": 1,
-                    "name": "Film"
-                },
-                "pictureUrl": "https://flxt.tmsimg.com/assets/p15227_p_v13_be.jpg",
-                "price": 5.0,
-                "genres": [
-                    {
-                        "id": 3,
-                        "name": "Drama"
-                    },
-                    {
-                        "id": 4,
-                        "name": "History"
-                    },
-                    {
-                        "id": 8,
-                        "name": "Biography"
-                    }
-                ]
-            },
-            {
-                "id": 6,
-                "title": "The godfather 2",
-                "releaseDate": "1974-01-01T00:00:00",
-                "stock": 7,
-                "rating": 5,
-                "format": {
-                    "id": 1,
-                    "name": "Film"
-                },
-                "pictureUrl": "",
-                "price": 4.0,
-                "genres": [
-                    {
-                        "id": 3,
-                        "name": "Drama"
-                    },
-                    {
-                        "id": 5,
-                        "name": "Crime"
-                    }
-                ]
-            },
-            {
-                "id": 7,
-                "title": "12 angry men",
-                "releaseDate": "1957-01-01T00:00:00",
-                "stock": 0,
-                "rating": 3.5,
-                "format": {
-                    "id": 1,
-                    "name": "Film"
-                },
-                "pictureUrl": "",
-                "price": 3.5,
-                "genres": [
-                    {
-                        "id": 3,
-                        "name": "Drama"
-                    },
-                    {
-                        "id": 5,
-                        "name": "Crime"
-                    }
-                ]
-            },
-            {
-                "id": 8,
-                "title": "Pulp Fiction",
-                "releaseDate": "1994-01-01T00:00:00",
-                "stock": 1,
-                "rating": 5,
-                "format": {
-                    "id": 1,
-                    "name": "Film"
-                },
-                "pictureUrl": "",
-                "price": 4.0,
-                "genres": [
-                    {
-                        "id": 3,
-                        "name": "Drama"
-                    },
-                    {
-                        "id": 5,
-                        "name": "Crime"
-                    }
-                ]
-            },
-            {
-                "id": 9,
-                "title": "Inception",
-                "releaseDate": "2010-01-01T00:00:00",
-                "stock": 2,
-                "rating": 5,
-                "format": {
-                    "id": 1,
-                    "name": "Film"
-                },
-                "pictureUrl": "",
-                "price": 5.0,
-                "genres": [
-                    {
-                        "id": 6,
-                        "name": "Action"
-                    },
-                    {
-                        "id": 7,
-                        "name": "Adventure"
-                    },
-                    {
-                        "id": 9,
-                        "name": "Sci-Fi"
-                    }
-                ]
-            },
-            {
-                "id": 10,
-                "title": "The lord of the rings : the two towers",
-                "releaseDate": "2002-01-01T00:00:00",
-                "stock": 1,
-                "rating": 4,
-                "format": {
-                    "id": 1,
-                    "name": "Film"
-                },
-                "pictureUrl": "",
-                "price": 3.0,
-                "genres": [
-                    {
-                        "id": 3,
-                        "name": "Drama"
-                    },
-                    {
-                        "id": 6,
-                        "name": "Action"
-                    },
-                    {
-                        "id": 7,
-                        "name": "Adventure"
-                    }
-                ]
-            }
-        ],
-        productPage: 1,
-        currentPage: 1,
     },
     mutations: {
+        setLang: function(state){
+            state.lang = i18n.global.locale;
+        },
+        setFormat: function(state, format){
+            state.format = format;
+        },
+        setGenre: function(state, genre){
+            state.genre = genre;
+        },
+        setRecentlyAdded: function(state, recentlyAdded){
+            state.recentlyAdded = recentlyAdded;
+        },
+
         setStatus: function(state, status) {
             state.status = status;
         },
         logUser: function(state, user) {
             state.user = user;
+        },
+
+        setProducts: function(state, data){
+            state.products = data.products;
+            state.totalPages = data.totalPages;
+            state.currentPage = data.currentPage;
         },
         addToCart: function(state, product){
 
@@ -294,15 +83,56 @@ const store = createStore({
             }
 
             localStorage.cart = state.cart;
+        },
+
+        setCurrentProduct(state, data){
+            console.log("sto - set", data);
+            state.currentProduct = data[0];
         }
     },
     getters: {
-        getUser: function(){
+        getLang: function(state){
+            return state.lang;
+        },
+        getFormat: function(state){
+            return state.format;
+        },
+        getGenre: function(state){
+            return state.genre;
+        },
+        getRecentlyAdded: function(state){
+            return state.recentlyAdded;
+        },
+
+        getStatus: function(state){
+            return state.status;
+        },
+        getUser: function(state){
             return state.user;
         },
-        getCart: function(){
+
+        getCart: function(state){
             return state.cart;
-        }
+        },
+        getCartCount: function(state){
+            return state.cartCount;
+        },
+
+        getProducts: function(state){
+            return state.products;
+        },
+        getCurrentPage: function(state){
+            return state.currentPage;
+        },
+        getTotalPages: function(state){
+            return state.totalPages;
+        },
+
+        getCurrentProduct: function(state){
+            console.log("sto - get ", state.currentProduct);
+            return state.currentProduct;
+        },
+        
     },
     actions: {
         register: ({commit}, userInfos) => {
@@ -320,6 +150,7 @@ const store = createStore({
             })
         },
         login: ({commit}, userInfos) => {
+
             commit('setStatus', 'loading');
             return new Promise((resolve, reject) => {
                 instance.post('/users/login', userInfos)
@@ -333,10 +164,43 @@ const store = createStore({
                     reject(error);
                 });
             })
+        },
+        products: ({commit}, params) => {
+
+            var query = '';
+            query += utils.queryLang();
+            query += utils.queryParams(params);
+
+            return new Promise((resolve, reject) => {
+                instance.get('/products' + query)
+                .then(function (response) {
+                    commit('setProducts', response.data);
+                    
+                    resolve(response);
+                })
+                .catch(function (error) {
+                    reject(error);
+                });
+            })
+        },
+        product: ({commit}, productId) => {
+            
+            var query = '';
+            //query += utils.queryLang();
+
+            return new Promise((resolve, reject) => {
+                instance.get('/product?id='+ productId + query)
+                .then(function (response) {
+                    commit('setCurrentProduct', response.data);
+                    console.log("sto - act", response.data);
+                    resolve(response);
+                })
+                .catch(function (error) {
+                    reject(error);
+                });
+            })
         }
     }
 })
-
-//commentaire
 
 export default store;

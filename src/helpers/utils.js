@@ -1,4 +1,39 @@
+import i18n from '@/i18n';
+
 var utils = {
+
+    queryLang(){
+        return '?lang=' + i18n.global.locale;
+    },
+
+    queryParams(params){
+        var query = '';
+        
+        Object.keys(params).forEach(key => {
+            if(params[key]){
+                query += '&';
+                query += key + '=' + params[key];
+            }
+            
+        });
+
+        return query;
+    },
+
+    formatDate(date) {
+        var d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+    
+        if (month.length < 2) 
+            month = '0' + month;
+        if (day.length < 2) 
+            day = '0' + day;
+    
+        return [year, month, day].join('-');
+    },
+
     hashSha256(message){
         var sha256 = require('js-sha256');
         var hash = sha256.create();
