@@ -13,6 +13,8 @@ import './assets/scss/app.scss'
 
 import FontAwesomeIcon from "@/helpers/fontAwsome";
 
+
+
 createApp(App)
     .component("FontAwesomeIcon", FontAwesomeIcon)
     .use(i18n)

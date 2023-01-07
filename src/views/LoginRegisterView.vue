@@ -91,8 +91,13 @@
                                         </button>
                                     </div>
                                 </div>
+                                <hr/>
+                                <div class="d-flex justify-content-center group form-outline mb-4">
+                                    <FBLogComp />
+                                </div>
+                                
                             </div>
-                            <FBLogComp />
+                            
                         </div>
 
                     </div>
