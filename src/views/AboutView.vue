@@ -37,9 +37,13 @@
                                             {{ $t('about.partners') }}
                                         </span>
                                     </h3>
-                                    <p>
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate cumque eius ut dolores tempora facilis laboriosam quibusdam nesciunt itaque? Quam laboriosam, fuga commodi cum adipisci neque nihil blanditiis tempora deleniti.
-                                    </p>
+                                    <div>
+                                        <p>{{ $t('about.descPartners.1') }}</p>
+                                        <p>{{ $t('about.descPartners.2') }}</p>
+                                        <p>{{ $t('about.descPartners.3') }}</p>
+                                        <p>{{ $t('about.descPartners.4') }}</p>
+                                        <p>{{ $t('about.descPartners.5') }}</p>
+                                    </div>
                                 </div>
                                 <hr/>
                                 <div>
@@ -68,12 +72,10 @@
                                             {{ $t('about.own') }}
                                         </span>
                                     </h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis ex dolore laudantium enim, eligendi similique natus omnis tempora nihil unde optio ipsam, quod, quam iste earum officiis mollitia officia neque.
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ut omnis animi modi odio tempora vitae sed rem neque obcaecati totam molestias repudiandae quisquam nihil, consequuntur voluptatibus, quia nisi. Cupiditate.
-                                    </p>
+                                    <div>
+                                        <p>{{ $t('about.descPrimeflix.1') }}</p>
+                                        <p>{{ $t('about.descPrimeflix.2') }}</p>
+                                    </div>
                                 </div>                                
                             </div>
                         </div>
