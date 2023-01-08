@@ -21,9 +21,14 @@
                                             {{ $t('about.salesLaw') }}
                                         </span>
                                     </h3>
-                                    <p>
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae amet blanditiis temporibus officia autem eius deserunt earum reiciendis culpa impedit, rerum quod explicabo fugit quasi sequi iure expedita voluptate reprehenderit.
-                                    </p>
+                                    <div>
+                                        <p>{{ $t('about.cgv.1') }}<br/>{{ $t('about.cgv.10') }}</p>
+                                        <p>{{ $t('about.cgv.2') }}<br/>{{ $t('about.cgv.20') }}</p>
+                                        <p>{{ $t('about.cgv.3') }}<br/>{{ $t('about.cgv.30') }}</p>
+                                        <p>{{ $t('about.cgv.4') }}<br/>{{ $t('about.cgv.40') }}</p>
+                                        <p>{{ $t('about.cgv.5') }}<br/>{{ $t('about.cgv.50') }}</p>
+                                        <p>{{ $t('about.cgv.6') }}<br/>{{ $t('about.cgv.60') }}</p>
+                                    </div>
                                 </div>
                                 <hr/>
                                 <div>
@@ -43,19 +48,18 @@
                                             {{ $t('about.datasUses') }}
                                         </span>
                                     </h3>
-                                    <h4>
-                                        Stripes
-                                    </h4>
-                                    <p>  
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad blanditiis fugit veniam corrupti officia sed obcaecati? Ratione officia natus iste ex nisi, fuga quos, vero ipsam quas omnis explicabo corrupti.
-                                    </p>
-                                    <h4>
-                                        Facebook
-                                    </h4>
-                                    <p>
-
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi commodi velit, alias dolor facere, delectus impedit tempore labore, ullam quidem! Ratione assumenda, consequatur ipsum alias rem eligendi cumque voluptate?
-                                    </p>
+                                    <div>
+                                        <p>{{ $t('about.rgpd.1') }}</p>
+                                        <p>{{ $t('about.rgpd.2') }}</p>
+                                        <p>{{ $t('about.rgpd.3') }}</p>
+                                        <p>{{ $t('about.rgpd.4') }}</p>
+                                        <p>{{ $t('about.rgpd.5') }}</p>
+                                        <p>{{ $t('about.rgpd.6') }}</p>
+                                        <p>{{ $t('about.rgpd.7') }}</p>
+                                        <p>{{ $t('about.rgpd.8') }}</p>
+                                        <p>{{ $t('about.rgpd.9') }}</p>
+                                        <p>{{ $t('about.rgpd.10') }}</p>
+                                    </div>
                                 </div>
                                 <hr/>
                                 <div>

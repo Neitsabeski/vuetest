@@ -39,7 +39,34 @@
     "salesLaw": "General conditions of sale",
     "datasUses": "Use of personal datas",
     "own": "Primeflix",
-    "partners": "Partners"
+    "partners": "Partners",
+    "rgpd": {
+      "1":"We ask your permission before collecting your personal data.",
+      "2":"We use this data to manage your orders, communicate with you and personalize your shopping experience.",
+      "3":"We present a clear and concise privacy policy on the use of your data.",
+      "4":"We protect your personal data with adequate security measures.",
+      "5":"We only collect the data necessary for the execution of our transactions and our communication with you.",
+      "6":"We comply with applicable laws on the protection of personal data, such as the GDPR in Europe.",
+      "7":"You have the right to access, rectify or erase your personal data.",
+      "8":"We are implementing measures to manage data leaks and prevent privacy breaches.",
+      "9":"We train our staff on data protection and collaborate with security experts.",
+      "10":"We make every effort to ensure the trust of our customers and respect their privacy."
+    },
+    "cgv":{
+      "1":"Article 1 - Object",
+      "10":"These General Terms and Conditions of Sale (hereinafter referred to as the 'GTC') are intended to define the terms and conditions for the online sale of DVDs (films and series) offered by Primeflix. They apply to all orders placed on the Primeflix website and are systematically presented to the buyer before any order validation.",
+      "2":"Item 2 - Order",
+      "20":"The buyer can place an order on the Primeflix website. The sale will only be considered final after Primeflix sends the order confirmation and the acceptance of payment. Primeflix reserves the right the right to refuse any order from a buyer with whom there is a dispute or if the item ordered is unavailable.",
+      "3":"Article 3 - Payment",
+      "30":"Payment for purchases is made via Stripe. All information transmitted by the buyer is secure and protected. Online payment is required for all orders placed on the Primeflix website.",
+      "4":"Article 4 - Delivery",
+      "40":"The DVDs are delivered to the delivery address indicated by the buyer when ordering. The delivery costs are the responsibility of the buyer and are indicated before validation of the order. Primeflix undertakes to deliver the items ordered in the shortest possible time, but cannot be held responsible for delays in delivery attributable to carriers.",
+      "5":"Article 5 - Withdrawal and refund",
+      "50":"The buyer has a period of 30 days from receipt of his order to exercise his right of withdrawal and request a refund. DVDs must be returned in their original packaging and in perfect condition . Return costs are the responsibility of the buyer. The refund will be made as soon as possible and at the latest within 30 days from the date of receipt of the DVDs by Primeflix.",
+      "6":"Article 6 - Legal guarantees",
+      "60":"Primeflix undertakes to respect the legal guarantees of conformity: items purchased on the Primeflix website must comply with the description provided and must be suitable for the use usually expected of a similar product."
+    }
+
   },
   "contact":{
     "title": "Contact",
