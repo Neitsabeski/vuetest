@@ -78,7 +78,7 @@
               <ul class="navbar-nav">                
                 <li class="nav-item dropstart">
                   <a class="dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    {{ user.firstName || "User" }}<span class="pinky"><font-awesome-icon icon="user" /></span>
+                    {{ user.data.firstName || "User" }}<span class="pinky"><font-awesome-icon icon="user" /></span>
                   </a>
                   <ul class="dropdown-menu" >
                     <li>
@@ -126,7 +126,7 @@
 
       },
       mounted() {
-        this.user = this.$store.state.user;
+        this.user = this.$store.getters.getUser;
       },
       methods: {
         search: function(event){

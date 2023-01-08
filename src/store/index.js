@@ -58,9 +58,13 @@ const store = createStore({
             state.status = status;
         },
         logUser: function(state, data) {
-            console.log(data[0]);
             state.user.userId = data[0].id;
             state.user.token = data[0].token;
+            state.user.data.firstName = data[0].firstName;
+            state.user.data.lastName = data[0].lastName;
+            state.user.data.phone = data[0].phone;
+            state.user.data.lang = data[0].lang;
+            state.user.data.email = data[0].email;
             console.log(state.user);
         },
         logOut: function(state){
